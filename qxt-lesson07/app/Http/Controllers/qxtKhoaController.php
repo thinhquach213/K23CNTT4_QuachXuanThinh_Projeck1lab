@@ -21,5 +21,12 @@ class qxtKhoaController extends Controller
         $khoa = DB::select("select * from qxtkhoa where qxtmakh=?", [$makh])[0];
         return view('qxtkhoa.qxtEdit',['khoa'=>$khoa]);
     }
+    public function qxtEditSubmit( Request $request)
+    {
+        $makh = $request->input('QXTMAKH');
+        $tenkh = $request->input('QXTTENKH');
+        DB::update(" UPDATE qxtkhoa set QXTTENKH = ? WHERE TVCMAKH=?",[$tenkh,$makh]);
+        return redirect('/khoas');
+    }
     
 }

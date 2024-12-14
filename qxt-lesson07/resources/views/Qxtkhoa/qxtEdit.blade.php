@@ -27,7 +27,7 @@
                 <div class="mb-3 row">
                         <label for="QXTTENKH" class="col-sm-2 col-form-label">Ten khoa</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control-plaintext" 
+                            <input type="text" class="form-control" 
                                    id="QXTTENKH" 
                                    value="{{$khoa->QXTTENKHOA}}">
                                    
